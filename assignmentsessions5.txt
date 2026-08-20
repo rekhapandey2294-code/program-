@@ -1,0 +1,159 @@
+
+                          ASSIGNMENT SESSION - 5 
+
+
+
+Que-1. Create a simple IPL Fan Bot that takes your favorite IPL team name as input and uses if-else-if statements to print a unique cheer message for each team (e.g., 'Go Mumbai Indians!', 'Chennai Super Kings for the win!'). If the team is not recognized, print 'Team not found!'
+
+
+#include <stdio.h>
+#include <string.h> // strcmp ke liye
+
+int main() {
+    char team[50];
+
+    printf("Enter your favorite IPL team: ");
+    scanf(" %[^\n]", team); // space wale naam ke liye
+
+    // if-else-if ladder
+    if (strcmp(team, "Mumbai Indians") == 0 || strcmp(team, "MI") == 0) {
+        printf("Go Mumbai Indians! Paltan ke dum se jeetenge! 💙");
+    }
+    else if (strcmp(team, "Chennai Super Kings") == 0 || strcmp(team, "CSK") == 0) {
+        printf("Chennai Super Kings for the win! Whistle Podu! 💛");
+    }
+    else if (strcmp(team, "Royal Challengers Bangalore") == 0 || strcmp(team, "RCB") == 0) {
+        printf("Ee Sala Cup Namde! Go RCB! ❤️");
+    }
+    else if (strcmp(team, "Kolkata Knight Riders") == 0 || strcmp(team, "KKR") == 0) {
+        printf("Korbo Lorbo Jeetbo! Go KKR! 💜");
+    }
+    else if (strcmp(team, "Delhi Capitals") == 0 || strcmp(team, "DC") == 0) {
+        printf("This is New Delhi! Go DC! 💙");
+    }
+    else if (strcmp(team, "Rajasthan Royals") == 0 || strcmp(team, "RR") == 0) {
+        printf("Halla Bol! Go Rajasthan Royals! 💗");
+    }
+    else if (strcmp(team, "Gujarat Titans") == 0 || strcmp(team, "GT") == 0) {
+        printf("Aava De! Go Gujarat Titans! 💙");
+    }
+    else if (strcmp(team, "Sunrisers Hyderabad") == 0 || strcmp(team, "SRH") == 0) {
+        printf("Orange Army! Go SRH! 🧡");
+    }
+    else if (strcmp(team, "Punjab Kings") == 0 || strcmp(team, "PBKS") == 0) {
+        printf("Sadda Punjab! Go PBKS! ❤️");
+    }
+    else if (strcmp(team, "Lucknow Super Giants") == 0 || strcmp(team, "LSG") == 0) {
+        printf("Ab Apni Baari Hai! Go LSG! 💚");
+    }
+    else {
+        printf("Team not found!");
+    }
+
+    return 0;
+}
+
+
+
+Que-2.  Build a Zomato-style food suggestion tool: take the user's preferred meal time ('breakfast', 'lunch', 'dinner', or 'snack') and use a switch-case statement to suggest a popular dish for that time. If the input doesn't match any meal, suggest 'Try some fruits!
+
+#include<stdio.h>
+int main(){
+    int meal;
+    printf(".....MENU....\n");
+    printf("1. Breakfast\n");
+    printf("2.Lunch\n");
+    printf("Dinner");
+    printf("Snacks\n");
+    printf("Enter your meal:");
+    scanf("%d,&meal");
+    switch(meal){
+case 1:
+    printf("Try some masala dosa!");
+    break;
+case 2:
+    printf("Daal rice and paneer curry!");
+    break;
+
+case 3:
+    printf("Try some paneer tikka!");
+    break;
+case 4:
+    printf("Try some samosa!");
+    break;
+default:
+    printf("Try some fruit!");
+    
+    }
+
+
+   return 0;
+
+}
+
+
+
+
+Que-3. Create a Flipkart discount calculator that asks the user for the total cart amount. Use nested if statements to check: if amount > 2000, apply 20% discount; else if amount > 1000, apply 10% discount; else, no discount. Print the final amount to pay.<br><br><em><strong>Hint:</strong> Use nested ifs to check each discount slab.</em>
+
+
+#include<stdio.h>
+int main(){
+    float total_cart_amount;
+    float discount;
+    printf("Enter total cart amount:");
+    scanf("%f,&total_cart_amount");
+    if(total_cart_amount>1000)
+    {
+        discount=(total_cart_amount*10)/100;
+        if(total_cart_amount>2000)
+            {
+              discount=(total_cart_amount*20)/100;
+
+        }
+    }
+
+    else
+    {
+        printf("No discount\n");
+    }
+
+   final_amount=total_cart_amount_discount;
+   printf("Final Amount.2f",final_amount);
+   return  0;
+
+
+}
+
+
+Que-4.  Write a program that takes a user's age and checks eligibility for three things using if-else statements: if age >= 18, print 'Eligible for Driving License'; if age >= 21, also print 'Eligible for Credit Card'; if age >= 25, also print 'Eligible for Car Rental'. Print all applicable messages for the given age.
+
+
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    // Check eligibility
+    if (age >= 18) {
+        printf("Eligible for Driving License\n");
+    }
+
+    if (age >= 21) {
+        printf("Eligible for Credit Card\n");
+    }
+
+    if (age >= 25) {
+        printf("Eligible for Car Rental\n");
+    }
+
+    if (age < 18) {
+        printf("Not eligible for Driving License, Credit Card, or Car Rental");
+    }
+
+    return 0;
+}
+
